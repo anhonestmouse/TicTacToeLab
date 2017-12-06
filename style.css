@@ -1,0 +1,17 @@
+.container{
+	width:100vw;
+	height:100vh;
+}
+.box{
+
+}
+.leftColumn{
+	float:left;
+}
+.middleColumn{
+	float:left;
+}
+.rightColumn{
+	float:left;
+	clear:right;
+}
