@@ -1,17 +1,51 @@
-.container{
+header{
+	width:100vw;
+	height:25vh;
+	margin: 0 auto;
+	text-align:center;
+}
+#container{
 	width:100vw;
 	height:100vh;
 }
+#gameBoard{
+	width:80vh;
+	height:80vh;
+	margin: 0 auto;
+}
 .box{
-
+	width:25vh;
+	height:25vh;
+	font-size:8em;
+	text-align:center;
+	vertical-align: middle;
+}
+span{
+	height:100%;
+	vertical-align: middle;
 }
 .leftColumn{
+	clear:left;
 	float:left;
+	border-right:2px solid black;
 }
 .middleColumn{
 	float:left;
+	border-left:2px solid black;
+	border-right:2px solid black;
 }
 .rightColumn{
 	float:left;
+	border-left:2px solid black;
 	clear:right;
+}
+.topRow{
+	border-bottom:2px solid black;
+}
+.middleRow{
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+}
+.bottomRow{
+	border-top:2px solid black;
 }
