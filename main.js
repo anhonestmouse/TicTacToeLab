@@ -1,10 +1,11 @@
 console.log("this is initializing the T^3 logic");
 $(document).ready(function(){
-// let initialize = function(){
-	// clear board first, then:
+
 	let clickCounter = 0;
 	let whoStarts = 0;
 	let isGameOver=false;
+	let xVictories = 0;
+	let oVictories = 0;
 	function checkForWin(){
 		// console.log($('.X.leftColumn').length);
 		// console.log($('.X.leftColumn'));
@@ -12,11 +13,15 @@ $(document).ready(function(){
 			// checks if there are any 3 x's in a row
 			alert("X Wins!  WOOO!");
 			$('.box').addClass('clicked');
+			++xVictories;
+			$('#xWins').text(xVictories);
 			isGameOver=true;
 		}else if(($('.O.leftColumn').length===3)||($('.O.middleColumn').length===3)||($('.O.rightColumn').length===3)||($('.O.topRow').length===3)||($('.O.middleRow').length===3)||($('.O.bottomRow').length===3)||($('.O.leftDiagonal').length===3)||($('.O.rightDiagonal').length===3)){
 		// checks if there are any 3 x's in a row
 		alert("O Wins!  WOOO!");
 		$('.box').addClass('clicked');
+		++oVictories;
+		$('#oWins').text(oVictories);
 		isGameOver=true;
 		}else if(clickCounter ===9){
 			alert("It's a Tie!  Players Switch");
