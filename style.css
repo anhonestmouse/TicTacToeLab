@@ -20,6 +20,9 @@ header{
 	text-align:center;
 	vertical-align: middle;
 }
+.box:hover{
+	background-color: rgba(6,255,0,.4);
+}
 span{
 	height:100%;
 	vertical-align: middle;
