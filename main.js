@@ -3,6 +3,7 @@ $(document).ready(function(){
 // let initialize = function(){
 	// clear board first, then:
 	let clickCounter = 0;
+	let whoStarts = 0;
 	function checkForWin(){
 		console.log($('.X.leftColumn').length);
 		console.log($('.X.leftColumn'));
@@ -18,11 +19,21 @@ $(document).ready(function(){
 			alert("It's a Tie!  Players Switch");
 		}
 	}
-
+	$('button').click(function(){
+		$('.box').removeClass('X O clicked');
+		$('.box').empty();
+		$('.box').css('background-color','white');
+		clickCounter = 0;
+		if(whoStarts===0){
+			whoStarts =1;
+		}else{
+			whoStarts = 0;
+		}
+	});
 
 	$('.box').click(function(){
 		if(!($(this).hasClass('clicked'))){
-			if(clickCounter%2===0){
+			if(clickCounter%2===whoStarts){
 				console.log('X');
 				$(this).addClass('clicked X');
 				$(this).text('X');
