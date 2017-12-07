@@ -32,22 +32,27 @@ $(document).ready(function(){
 	});
 	$('.box').mouseover(function(){
 		if(!$(this).hasClass('clicked')){
-			if(!whoStarts){
+			if(clickCounter%2===whoStarts){
 				$(this).text('X');
 				$(this).css('background-color','rgba(143,241,255,.3)');
+				$(this).css('color','rgba(255, 31, 248,.3)');
 			}else{
 				$(this).text('O');
 				$(this).css('background-color','rgba(255,169,112,.3)');
+				$(this).css('color','rgba(7, 154, 255,.3');
 			}
 		}
 	});
 	$('.box').mouseout(function(){
-		if(!whoStarts){
-			$(this).empty();
-			$(this).css('background-color','white');
-		}else{
-			$(this).empty();
-			$(this).css('background-color','white');
+		if(!$(this).hasClass('clicked')){
+			if(clickCounter%2===whoStarts){
+				$(this).empty();
+				$(this).css('background-color','white');
+				$(this).css('color','#888888');
+			}else{
+				$(this).empty();
+				$(this).css('background-color','white');
+			}
 		}
 	});
 	$('.box').click(function(){
