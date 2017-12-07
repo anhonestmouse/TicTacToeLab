@@ -20,9 +20,9 @@ header{
 	text-align:center;
 	vertical-align: middle;
 }
-.box:hover{
+/*.box:hover{
 	background-color: rgba(6,255,0,.4);
-}
+}*/
 .leftColumn{
 	clear:left;
 	float:left;

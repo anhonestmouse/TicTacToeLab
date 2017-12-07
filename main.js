@@ -30,7 +30,26 @@ $(document).ready(function(){
 			whoStarts = 0;
 		}
 	});
-
+	$('.box').mouseover(function(){
+		if(!$(this).hasClass('clicked')){
+			if(!whoStarts){
+				$(this).text('X');
+				$(this).css('background-color','rgba(143,241,255,.3)');
+			}else{
+				$(this).text('O');
+				$(this).css('background-color','rgba(255,169,112,.3)');
+			}
+		}
+	});
+	$('.box').mouseout(function(){
+		if(!whoStarts){
+			$(this).empty();
+			$(this).css('background-color','white');
+		}else{
+			$(this).empty();
+			$(this).css('background-color','white');
+		}
+	});
 	$('.box').click(function(){
 		if(!($(this).hasClass('clicked'))){
 			if(clickCounter%2===whoStarts){
